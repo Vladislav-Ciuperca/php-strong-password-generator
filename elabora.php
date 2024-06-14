@@ -46,7 +46,7 @@ function prova($arg1, $arg2)
 
     for ($count = 0; $count < $PwLength-1; ++$count) {
 
-        echo $allowed[rand(0, count($allowed))];
+        echo $allowed[rand(0, count($allowed)-1)];
     }
 
     ?>
@@ -56,7 +56,7 @@ function prova($arg1, $arg2)
     <?php
     for ($count = 0; $count < $PwLength / 2; ++$count) {
 
-        // echo rand(0, 8);
+         echo rand(0, 8);
 
 
         echo $allowed[rand(0, count($allowed))];
