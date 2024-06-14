@@ -28,6 +28,15 @@ function prova($arg1, $arg2)
 
 <body>
 
+    <form action="elabora.php" method="GET">
+
+
+        <input type="number" name="number" placeholder="select the length of your password">
+
+        <button type="submit">invia</button>
+
+    </form>
+
     <h1><?php echo "Hai richioesto una password lunga " . $PwLength . " caratteri" ?></h1>
     <h2><?php echo "La tua password" ?></h2>
 
@@ -35,7 +44,7 @@ function prova($arg1, $arg2)
 
 
 
-    for ($count = 0; $count < $PwLength; ++$count) {
+    for ($count = 0; $count < $PwLength-1; ++$count) {
 
         echo $allowed[rand(0, count($allowed))];
     }
@@ -47,7 +56,7 @@ function prova($arg1, $arg2)
     <?php
     for ($count = 0; $count < $PwLength / 2; ++$count) {
 
-        echo rand(0,8);
+        // echo rand(0, 8);
 
 
         echo $allowed[rand(0, count($allowed))];
